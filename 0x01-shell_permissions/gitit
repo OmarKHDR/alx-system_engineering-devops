@@ -1,0 +1,7 @@
+if [ $1 == 'y' ]; then
+	chmod u+x $2
+fi 
+git add .
+git commit -m $2
+git push
+
