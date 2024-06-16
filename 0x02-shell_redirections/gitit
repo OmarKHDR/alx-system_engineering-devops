@@ -1,0 +1,9 @@
+#!/bin/bash
+echo -n "executable [y/n]: " 
+read exe
+if [[ "$exe" == [yY] ]]; then
+	chmod u+x $1
+fi
+git add .
+git commit -m "adding $1"
+git push	
