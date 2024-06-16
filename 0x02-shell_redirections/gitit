@@ -10,10 +10,10 @@ fi
 echo -n "commit and push?[y/n]"
 read comm
 if [[ "$comm" == [yY] ]]; then
-	echo -n "enter commit message or use default file name"
+	echo "enter commit message or use default file name :"
 	read mess
 	git add .
-	if [[ "$mess" == "" ]]; then
+	if [[ "$mess" != '' ]]; then
 		git commit -m "$mess"
 	else 
 		git commit -m "adding $1"
