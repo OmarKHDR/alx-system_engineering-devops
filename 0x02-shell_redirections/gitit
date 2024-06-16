@@ -7,7 +7,7 @@ if [[ "$exe" == [yY] ]]; then
 else 
 	echo "no one will run this shit"
 fi
-echo -n "commit and push?[y/n]"
+echo -n "commit and push?[y/n]: "
 read comm
 if [[ "$comm" == [yY] ]]; then
 	echo "enter commit message or use default file name :"
