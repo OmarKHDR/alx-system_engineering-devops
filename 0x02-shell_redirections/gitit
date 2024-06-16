@@ -3,7 +3,23 @@ echo -n "executable [y/n]: "
 read exe
 if [[ "$exe" == [yY] ]]; then
 	chmod u+x $1
+	echo "the file is executable now"
+else 
+	echo "no one will run this shit"
 fi
-git add .
-git commit -m "adding $1"
-git push	
+echo -n "commit and push?[y/n]"
+read comm
+if [[ "$comm" == [yY] ]]; then
+	echo -n "enter commit message or use default file name"
+	read mess
+	git add .
+	if [[ "$mess" == "" ]]; then
+		git commit -m "$mess"
+	else 
+		git commit -m "adding $1"
+	fi
+	git push
+
+else 
+	echo "didn't commit"
+fi	
