@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -t -r | grep *[!/] | head -n 10
+find . -type f | ls -t -r | head -n 10
