@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f | ls -t -r | head -n 10
+ls -trp | grep -v /$ | head -n 10
