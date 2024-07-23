@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # comment
+# shellcheck disable=SC2009
 kill "$(ps ax | grep 4-to_infinity_and_beyond | grep -v "grep" | awk '{print $1}' | tr "\n" " ")"
