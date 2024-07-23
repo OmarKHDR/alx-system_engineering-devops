@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# nested loop
+
+for ((i=0 ; i<=12 ; i++))
+do
+    echo "Hour: $i"
+    for ((j=1 ; j<60 ; j++))
+    do
+        echo "$j"
+    done
+done
