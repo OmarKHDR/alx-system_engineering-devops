@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-
+# you didnt ask for comment its your fault
 ls | cut -d "-" -f 2
