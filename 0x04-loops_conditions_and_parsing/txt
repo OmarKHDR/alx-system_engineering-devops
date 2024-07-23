@@ -1,0 +1,56 @@
+[Got]
+1
+2
+3
+4
+bad luck from China
+5
+6
+7
+8
+9
+bad luck from Japan
+10
+11
+12
+13
+14
+15
+16
+17
+bad luck from Itali
+18
+19
+20
+
+(111 chars long)
+[stderr]: 
+(0 chars long)
+[Expected]
+1
+2
+3
+4
+bad luck from China
+5
+6
+7
+8
+9
+bad luck from Japan
+10
+11
+12
+13
+14
+15
+16
+17
+bad luck from Italy
+18
+19
+20
+
+(111 chars long)
+[stderr]: [Anything]
+(0 chars long)
