@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+for ((i=1 ; i<=100 ; i++));
+do
+    if [ $((i%3)) == 0 ]; then
+        echo -n "Fizz"
+    fi
+    if [ $((i%5)) == 0 ]; then
+        echo -n "Buzz"
+    fi
+    if (( $((i%3)) == 0 || $((i%5)) == 0 )); then
+        echo ""
+    else
+        echo $i
+    fi
+
+done
