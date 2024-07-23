@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# comment
+pgrep -u "$(whoami)" bash -l
