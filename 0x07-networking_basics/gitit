@@ -1,0 +1,4 @@
+chmod u+x "$1"
+git add .
+git commit -m "adding $1 file"
+git push
