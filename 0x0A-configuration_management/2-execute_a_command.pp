@@ -1,6 +1,6 @@
 # -=  =- 
 
 exec{'kill_me':
-    command => 'pkill killmenow'
-    provider=> 'shell'
+    command  => 'pkill killmenow'
+    provider => 'shell'
 }
