@@ -1,6 +1,5 @@
-# -=  =- 
-
-exec{'kill_me':
-    command   => 'pkill killmenow'
-    provider  => 'shell'
+# The last script
+exec { 'KillingProcess':
+    command  => 'pkill killmenow',
+    provider => 'shell',
 }
