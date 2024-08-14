@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#404
+
+sudo apt-get -y update
+sudo upt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo echo "Hello World!" | tee /var/www/html/index.html
+sudo echo "Ceci n'est pas une page" | tee /var/www/html/notFound.html
+
