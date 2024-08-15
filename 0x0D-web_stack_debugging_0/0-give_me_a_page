@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+docker exec -it $(docker ps -q --filter "ancestor=holbertonschool/265-0") /bin/bash
+sudo mkdir -p /var/www/html
+sudo echo "Hello Holberton" > /var/www/html/index.html
+sudo service apache2 start
+exit
