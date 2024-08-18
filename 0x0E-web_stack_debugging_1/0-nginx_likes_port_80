@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# try to
+sudo apt-get update --fix-missing
+sudo apt install -y nginx
+sudo service nginx start
