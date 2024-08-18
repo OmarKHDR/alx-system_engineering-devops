@@ -12,8 +12,8 @@ def recurse(subreddit, hot_list=[], after=None, count=0):
     params = {"limit": 50, "after": after, "count": count}
     headers = {"User-Agent": user_agent}
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    my_json_object = requests.get(url, params=params,
-                                  headers=headers, allow_redirects=False)
+    my_json_object = requests.get(
+        url, params=params, headers=headers, allow_redirects=False)
     if my_json_object.status_code == 404:
         return None
     else:
