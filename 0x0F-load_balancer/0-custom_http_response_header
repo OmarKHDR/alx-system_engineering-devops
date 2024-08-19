@@ -6,5 +6,8 @@ sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo echo "Hello World!" > /var/www/html/index.html
 sudo service nginx start
-sudo sed -i 's/^(?!#)\s*location \/ {/location \/ {\n\t\t add_header X-Served-By $server_name;/' /etc/nginx/sites-available/default
-sudo nginx -s reload
+Host=$(hostname)
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo sed -i 's/^(?!#)\s*location \/ {/location \/ {\n\t\t add_header X-Served-By $Host;/' /etc/nginx/sites-enabled/default
+sudo service nginx restart
