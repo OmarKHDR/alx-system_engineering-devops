@@ -23,5 +23,5 @@ if __name__ == "__main__":
             done_tasks.append(task['title'])
             completed += 1
     print(f"Employee {name} is done with tasks({completed}/{total}):")
-    for task in done_tasks: 
+    for task in done_tasks:
         print(f"\t{task}")
