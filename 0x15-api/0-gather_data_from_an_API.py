@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" docs """
+""" docs IS imp """
 import requests
 import sys
 
@@ -8,7 +8,6 @@ employee_id = sys.argv[1]
 params = {"userId": employee_id}
 res = requests.get("https://jsonplaceholder.typicode.com/todos/", params=params)
 res2 = requests.get("https://jsonplaceholder.typicode.com/users/", params={'id': employee_id})
-
 
 done_tasks = []
 completed = 0
@@ -21,8 +20,8 @@ for task in res:
     if task['completed']:
         done_tasks.append(task['title'])
         completed += 1
+if __name__ == "__main__":
+    print(f"Employee {name} is done with tasks({completed}/{total}):")
 
-print(f"Employee {name} is done with tasks({completed}/{total}):")
-
-for task in done_tasks:    
-    print(f"\t{task}")
+    for task in done_tasks:    
+        print(f"\t{task}")
