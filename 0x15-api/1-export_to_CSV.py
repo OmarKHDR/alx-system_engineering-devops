@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     res2 = requests.get(url+"todos"+f"?userId={empId}")
     res2 = res2.json()
-    with open('USER_ID.csv', 'w') as f:
+    with open(f'{empId}.csv', 'w') as f:
         for task in res2:
             line = f"\"{empId}\",\"{empName}\","
             line += f"\"{task['completed']}\",\"{task['title']}\"\n"
