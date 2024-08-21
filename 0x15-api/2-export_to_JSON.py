@@ -16,6 +16,8 @@ if __name__ == "__main__":
     user_arr = []
     for task in res2:
         task['username'] = empName
+        task['task'] = task['title']
+        del task['id'], task['userId'], task['title']
         user_arr.append(task)
 
     obj = {f'{empId}': user_arr}
