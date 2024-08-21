@@ -18,7 +18,7 @@ if __name__ == "__main__":
         task['username'] = empName
         user_arr.append(task)
 
-    obj = {f'\"{empId}\"': user_arr}
+    obj = {f'{empId}': user_arr}
     json_obj = json.dumps(obj)
     with open(f"{empId}.json", 'w') as f:
         f.write(json_obj)
