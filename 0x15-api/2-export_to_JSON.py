@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """docs are docs"""
-import requests
 import json
+import requests
 import sys
 
 
