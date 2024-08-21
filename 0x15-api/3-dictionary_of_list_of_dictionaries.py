@@ -11,8 +11,7 @@ if __name__ == "__main__":
     users_obj = {}
     for user in res1:
         user_arr = []
-        print(user_arr)
-        res2 = requests.get(url+"todos/"+f'?{user["id"]}').json()
+        res2 = requests.get(url+"todos/"+f'?userId={user["id"]}').json()
         for task in res2:
             task['username'] = user['name']
             task['task'] = task['title']
