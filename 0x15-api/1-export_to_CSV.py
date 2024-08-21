@@ -4,7 +4,6 @@ import requests
 import sys
 
 
-#"USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
 if __name__ == "__main__":
     url = "https://jsonplaceholder.typicode.com/"
     empId = sys.argv[1]
@@ -13,7 +12,7 @@ if __name__ == "__main__":
 
     res2 = requests.get(url+"todos"+f"?userId={empId}")
     res2 = res2.json()
-    with open('USER_ID.csv', 'w') as f:    
+    with open('USER_ID.csv', 'w') as f:
         for task in res2:
             line = f"\"{empId}\",\"{empName}\","
             line += f"\"{task['completed']}\",\"{task['title']}\"\n"
