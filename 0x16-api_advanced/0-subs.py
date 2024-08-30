@@ -7,12 +7,13 @@ def number_of_subscribers(subreddit):
     """A function to do stuff that can be done using other functions"""
     if subreddit is None or type(subreddit) is not str:
         return 0
-    user_agent = "0x16-api_advanced/1.0 by frog-in-well"
+    user_agent = "frog-in-well"
     headers = {"User-Agent": user_agent}
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    my_object = requests.get(url, headers=headers, allow_redirects=False)
-    my_dict = my_object.json()
-    if my_object.status_code >= 400:
-        return my_dict['data']['subscribers']
-    else:
+    res = requests.get(url, headers=headers, allow_redirects=False)
+    dic = res.json()
+    if res.status_code >= 400:
         return 0
+    else:
+        return dic['data']['subscribers']
+
