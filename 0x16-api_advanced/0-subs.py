@@ -1,11 +1,9 @@
 #!/usr/bin/python3
+"""First script that uses Reddit API"""
 import requests
 
 
 def number_of_subscribers(subreddit):
-    """
-    my func
-    """
     """A function to do stuff that can be done using other functions"""
     if subreddit is None or type(subreddit) is not str:
         return 0
