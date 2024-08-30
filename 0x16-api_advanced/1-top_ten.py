@@ -1,25 +1,27 @@
 #!/usr/bin/python3
 """Second script that uses Reddit API"""
-import json
 import requests
 
 
 def top_ten(subreddit):
-    """A function to do stuff that can be done using other functions"""
-    if subreddit is None or type(subreddit) is not str:
-        return 0
-    user_agent = "0x16-api_advanced/1.0 by AMR856"
-    headers = {"User-Agent": user_agent}
-    params = {"limit": 10}
+    """ |pls |accepted"""
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    my_object = requests.get(url, params=params, headers=headers, allow_redirects=False)
-    if my_object.status_code == 404:
-        print("None")
-        return
+    headers = {
+        'User-Agent': 'frog-in-well'
+    }
+    res = requests.get(url, headers, allow_redirects=False)
+    if res.status_code != 200:
+        print('None')
     else:
-        my_dict = my_object.json()
-        for reddit in my_dict['data']['children']:
-            print(reddit['data']['title'])
-
-
-"https://www.reddit.com/r/programming/hot.json/?limit=10"
+        try:
+            res = res.json()
+            i = 0
+            j = 0
+            while (i < 10):
+                if res['data']['children'][i+j]['data']['selftext'] == "":
+                    j += 1
+                    continue
+                print(res['data']['children'][i+j]['data']['selftext'] )
+                i += 1
+        except:
+            print('None')
