@@ -17,9 +17,14 @@ def search(keyword):
         try:
             res = res.json()
             for post in res['data']['children']:
-                print(post['data']['title'])
+                print(post['data']['title'],":")
+                if(post['data']['selftext'] == ""):
+                    print("no content")
+                else:
+                    print(post['data']['selftext'])
+                print("\n")
         except:
-            print("problem with result", res.text)
+            print("problem with result")
         after = res['data']['after']
 
 if __name__ == '__main__':
