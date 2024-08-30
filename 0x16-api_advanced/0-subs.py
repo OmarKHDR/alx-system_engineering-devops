@@ -10,7 +10,7 @@ def number_of_subscribers(subreddit):
     user_agent = "frog-in-well"
     headers = {"User-Agent": user_agent}
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    res = requests.get(url, headers=headers, allow_redirects=False)
+    res = requests.get(url, headers=headers, allow_redirects=True)
     try:
         dic = res.json()
     except:
@@ -19,3 +19,12 @@ def number_of_subscribers(subreddit):
         return 0
     else:
         return dic['data']['subscribers']
+
+import sys
+
+if __name__ == '__main__':
+    number_of_subscribers = __import__('0-subs').number_of_subscribers
+    if len(sys.argv) < 2:
+        print("Please pass an argument for the subreddit to search.")
+    else:
+        print("{:d}".format(number_of_subscribers(sys.argv[1])))
