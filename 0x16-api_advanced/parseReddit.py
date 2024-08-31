@@ -12,7 +12,7 @@ def print_comments(comment_list):
             print(child['data']['body'])
             if child['data']['replies'] == "":
                 continue
-            print_comments(child['data']['replies']['data']['selftext'])
+            print_comments(child['data']['replies']['data']['children'])
 
 
 def print_content_and_comments(post, headers):
