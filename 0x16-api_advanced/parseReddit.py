@@ -34,7 +34,7 @@ def search(keyword):
     while (after is not None):
         url = f"https://www.reddit.com/search.json?q={keyword}&after={after}"
         headers = {
-            'User-Agent': 'frog-in-well'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0'
         }
         res = requests.get(url, headers=headers)
         if res.status_code != 200:
