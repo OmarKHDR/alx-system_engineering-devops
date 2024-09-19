@@ -1,3 +1,11 @@
 #!/usr/bin/env bash
-# you didnt ask for comment its your fault
-find . | cut -d "-" -f 2
+# This script is displaying the files in the current dir
+for myFile in *
+do
+    if [[ $myFile == .* ]]; then
+        continue
+    elif [ ! -f "$myFile" ]; then
+        continue
+    fi
+    echo "$myFile" | cut -d '-' -f2
+done
