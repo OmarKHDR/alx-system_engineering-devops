@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-#nci
+# This script is hungry for killing
+myPid=$(pgrep -f "7-highlander")
+kill -9 "$myPid"
 
-kill -9 $(pgrep -f "7-highlander")
+# echo "$$" > /var/run/myscript.pid
